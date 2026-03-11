@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "rest_001",
+    "name": "써브웨이(판구브릭지타우점)",
+    "category": "패스트푸드",
+    "menuUrl": "https://map.naver.com/v5/search/%EC%8D%A8%EB%B8%8C%EC%9B%A8%EC%9D%B4%28%ED%8C%90%EA%B5%AC%EB%B8%8C%EB%A6%AD%EC%A7%80%ED%83%80%EC%9B%8C%EC%A0%90%29%20%EB%A9%94%EB%89%B4"
+  },
+  {
+    "id": "rest_002",
+    "name": "최고야 전구5대짠뼳",
+    "category": "중식",
+    "menuUrl": "https://map.naver.com/v5/search/%EC%B5%9C%EA%B3%A0%EC%95%BC%20%EC%A0%84%EA%B5%AD5%EB%8C%80%EC%A7%AC%EB%BB%95%20%EB%A9%94%EB%89%B4"
+  },
+  {
+    "id": "rest_003",
+    "name": "브라운버터_OR",
+    "category": "기타",
+    "menuUrl": "https://map.naver.com/v5/search/%EB%B8%8C%EB%9D%BC%EC%9A%B4%EB%B2%84%ED%84%B0_OR%20%EB%A9%94%EB%89%B4"
+  },
+  {
+    "id": "rest_004",
+    "name": "송도갈비천지연(판구브릭지타우점)",
+    "category": "기타",
+    "menuUrl": "https://map.naver.com/v5/search/%EC%86%A1%EB%8F%84%EA%B0%88%EB%B9%84%EC%B2%9C%EC%A7%80%EC%97%B0%28%ED%8C%90%EA%B5%AC%EB%B8%8C%EB%A6%AD%EC%A7%80%ED%83%80%EC%9B%8C%EC%A0%90%29%20%EB%A9%94%EB%89%B4"
+  },
+  {
+    "id": "rest_005",
+    "name": "율리아테이블",
+    "category": "패스트푸드",
+    "menuUrl": "https://map.naver.com/v5/search/%EC%9C%A8%EB%A6%AC%EC%95%84%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%A9%94%EB%89%B4"
+  },
+  {
+    "id": "rest_006",
+    "name": "키친박스",
+    "category": "기타",
+    "menuUrl": "https://map.naver.com/v5/search/%ED%82%A4%EC%B9%9C%EB%B0%95%EC%8A%A4%20%EB%A9%94%EB%89%B4"
+  }
+]
