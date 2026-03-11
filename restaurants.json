@@ -1,38 +1,48 @@
 [
-  {
-    "id": "rest_001",
-    "name": "써브웨이(판구브릭지타우점)",
-    "category": "패스트푸드",
-    "menuUrl": "https://map.naver.com/v5/search/%EC%8D%A8%EB%B8%8C%EC%9B%A8%EC%9D%B4%28%ED%8C%90%EA%B5%AC%EB%B8%8C%EB%A6%AD%EC%A7%80%ED%83%80%EC%9B%8C%EC%A0%90%29%20%EB%A9%94%EB%89%B4"
-  },
-  {
-    "id": "rest_002",
-    "name": "최고야 전구5대짠뼳",
-    "category": "중식",
-    "menuUrl": "https://map.naver.com/v5/search/%EC%B5%9C%EA%B3%A0%EC%95%BC%20%EC%A0%84%EA%B5%AD5%EB%8C%80%EC%A7%AC%EB%BB%95%20%EB%A9%94%EB%89%B4"
-  },
-  {
-    "id": "rest_003",
-    "name": "브라운버터_OR",
-    "category": "기타",
-    "menuUrl": "https://map.naver.com/v5/search/%EB%B8%8C%EB%9D%BC%EC%9A%B4%EB%B2%84%ED%84%B0_OR%20%EB%A9%94%EB%89%B4"
-  },
-  {
-    "id": "rest_004",
-    "name": "송도갈비천지연(판구브릭지타우점)",
-    "category": "기타",
-    "menuUrl": "https://map.naver.com/v5/search/%EC%86%A1%EB%8F%84%EA%B0%88%EB%B9%84%EC%B2%9C%EC%A7%80%EC%97%B0%28%ED%8C%90%EA%B5%AC%EB%B8%8C%EB%A6%AD%EC%A7%80%ED%83%80%EC%9B%8C%EC%A0%90%29%20%EB%A9%94%EB%89%B4"
-  },
-  {
-    "id": "rest_005",
-    "name": "율리아테이블",
-    "category": "패스트푸드",
-    "menuUrl": "https://map.naver.com/v5/search/%EC%9C%A8%EB%A6%AC%EC%95%84%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%A9%94%EB%89%B4"
-  },
-  {
-    "id": "rest_006",
-    "name": "키친박스",
-    "category": "기타",
-    "menuUrl": "https://map.naver.com/v5/search/%ED%82%A4%EC%B9%9C%EB%B0%95%EC%8A%A4%20%EB%A9%94%EB%89%B4"
-  }
+{"id":"rest_001","name":"써브웨이(판교브릿지타워점)","category":"패스트푸드"},
+{"id":"rest_002","name":"율리아테이블","category":"패스트푸드"},
+{"id":"rest_003","name":"브라운버터_QR","category":"기타"},
+{"id":"rest_004","name":"송도갈비천지연(판교브릿지타워점)","category":"기타"},
+{"id":"rest_005","name":"키친박스","category":"기타"},
+{"id":"rest_006","name":"킨파","category":"기타"},
+{"id":"rest_007","name":"북청집(2호점)","category":"패스트푸드"},
+{"id":"rest_008","name":"서호돈가스","category":"패스트푸드"},
+{"id":"rest_009","name":"스시가오","category":"패스트푸드"},
+{"id":"rest_010","name":"스시가오_QR","category":"기타"},
+{"id":"rest_011","name":"아세야마","category":"일식"},
+{"id":"rest_012","name":"압구정김치찌개","category":"패스트푸드"},
+{"id":"rest_013","name":"스타벅스(판교브릿지타워점)","category":"카페"},
+{"id":"rest_014","name":"옵션스페셜티커피(판교우림더블유시티점)","category":"카페"},
+{"id":"rest_015","name":"화우재","category":"기타"},
+{"id":"rest_016","name":"찌개주는 낭만불백","category":"기타"},
+{"id":"rest_017","name":"델리스_QR","category":"기타"},
+{"id":"rest_018","name":"런원쭈꾸미볶음","category":"패스트푸드"},
+{"id":"rest_019","name":"블루삭(판교우림W시티점)","category":"패스트푸드"},
+{"id":"rest_020","name":"우림 닭갈비","category":"패스트푸드"},
+{"id":"rest_021","name":"가비정","category":"패스트푸드"},
+{"id":"rest_022","name":"건강해, 샐러드","category":"패스트푸드"},
+{"id":"rest_023","name":"건강해, 샐러드_KIOSK","category":"기타"},
+{"id":"rest_024","name":"군산오징어(우림더블유시티점)","category":"패스트푸드"},
+{"id":"rest_025","name":"그린쿡_QR","category":"기타"},
+{"id":"rest_026","name":"꿀돼지두루치기","category":"기타"},
+{"id":"rest_027","name":"담북김밥","category":"패스트푸드"},
+{"id":"rest_028","name":"돈까스에 미친 김밥","category":"패스트푸드"},
+{"id":"rest_029","name":"런치스토리_QR","category":"기타"},
+{"id":"rest_030","name":"먼데이키친","category":"패스트푸드"},
+{"id":"rest_031","name":"미소","category":"기타"},
+{"id":"rest_032","name":"버터큐_QR","category":"기타"},
+{"id":"rest_033","name":"본가광양불고기","category":"패스트푸드"},
+{"id":"rest_034","name":"복청집(2호점)","category":"패스트푸드"},
+{"id":"rest_035","name":"정원","category":"패스트푸드"},
+{"id":"rest_036","name":"카페우드진(판교우림W시티점)_KIOSK","category":"기타"},
+{"id":"rest_037","name":"모박사부대찌개(판교점)","category":"한식"},
+{"id":"rest_038","name":"양평해장국(판교우림시티점)","category":"한식"},
+{"id":"rest_039","name":"카페 두레브","category":"카페"},
+{"id":"rest_040","name":"춘업순대국과 0627 부대찌개","category":"기타"},
+{"id":"rest_041","name":"하코야(판교우림점)","category":"기타"},
+{"id":"rest_042","name":"최고야 전국5대짬뽕","category":"중식"},
+{"id":"rest_043","name":"바나프레소(판교우림W시티점)","category":"카페"},
+{"id":"rest_044","name":"감성커피(판교우림W시티점)","category":"패스트푸드"},
+{"id":"rest_045","name":"블리스버거(판교점)","category":"패스트푸드"},
+{"id":"rest_046","name":"본우리반상(판교우림W시티점)","category":"한식"}
 ]
