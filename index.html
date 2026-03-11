@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>점심 룰레트</title>
+  <style>
+    body{font-family: system-ui, -apple-system, sans-serif; background:#0b0c10; color:#eaf0f6; margin:0;}
+    .wrap{max-width:900px; margin:0 auto; padding:20px;}
+    .card{border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.03); border-radius:16px; padding:16px; margin-top:12px;}
+    .row{display:flex; gap:10px; flex-wrap:wrap;}
+    button{cursor:pointer; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.05); color:#eaf0f6; border-radius:12px; padding:10px 12px;}
+    button.primary{background:#f15a24; border-color:#f15a24; color:#0b0c10;}
+    .small{font-size:13px; opacity:0.85;}
+    .muted{opacity:0.7;}
+    .big{font-size:18px; font-weight:750;}
+    .wheel{height:160px; display:flex; align-items:center; justify-content:center; border:1px dashed rgba(255,255,255,0.2); border-radius:16px; margin-top:10px;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="big">최후의 만찮<br/>운명의 원판이 깔어있다</div>
+    <div class="small muted">망설임을 거두어라. 룰레트는 조건에 맞는 식당만 남겨 도린다.</div>
+    <div class="row" style="margin-top:12px;">
+      <button class="primary" id="startBtn">운명의 시간 시작</button>
+      <button id="quickBtn">빠른 결과</button>
+    </div>
+    <div style="margin-top:10px;" class="small muted">선택방: <span id="count">-</span></div>
+  </div>
+
+  <div class="card" id="wheelPanel" style="display:none;">
+    <div class="big">룰레트</div>
+    <div class="wheel">
+      <div>
+        <div class="small muted">회전 중...</div>
+        <div id="wheelName" class="big"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="resultPanel" style="display:none;">
+    <div class="big">결과</div>
+    <div id="resultName" class="big" style="margin-top:8px;"></div>
+    <div id="resultMeta" class="small muted"></div>
+    <div id="resultSummary" style="margin-top:8px;"></div>
+    <div class="row" style="margin-top:10px;">
+      <button class="primary" id="menuBtn">메뉴판</button>
+      <button id="copyBtn">복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="big">데이터</div>
+    <div class="small muted">뒤에서 여기를 채워두면 도함니다.</div>
+    <pre class="small" id="dataHint"></pre>
+  </div>
+</div>
+
+<script>
+// TODO: 식당 목록을 여기에 채워 넣어라.
+// 주요 필드: name, category, summary, menuUrl
+const restaurants = [
+  {
+    id: 'sample-1',
+    name: '허기이 출신을 기다리',
+    category: '스벅지',
+    summary: '안에 가도시',
+    menuUrl: 'https://map.naver.com/v5/search/%EB%A9%94%EB%89%B4/%ED%8F%B0%EC%BC%93'
+  }
+];
+
+function meta(r){
+  const t=[];
+  if(r.category) t.push(r.category);
+  return t.join(' · ');
+}
+
+function updateCount(){
+  document.getElementById('count').textContent = `${restaurants.length}`;
+  document.getElementById('dataHint').textContent = JSON.stringify(restaurants[0], null, 2);
+}
+
+updateCount();
+
+let spinning=false;
+async function spin(){
+  if(spinning) return;
+  if(!restaurants.length){ alert('조건에 맞는 식당이 없음'); return; }
+  spinning=true;
+  document.getElementById('resultPanel').style.display='none';
+  document.getElementById('wheelPanel').style.display='';
+  const pick=()=>restaurants[Math.floor(Math.random()*restaurants.length)];
+  for(let i=0;i<15;i++){
+    document.getElementById('wheelName').textContent=pick().name;
+    await new Promise(res=>setTimeout(res, 120+i*20));
+  }
+  document.getElementById('wheelPanel').style.display='none';
+  const r=pick();
+  renderResult(r);
+  spinning=false;
+}
+
+function renderResult(r){
+  document.getElementById('resultPanel').style.display='';
+  document.getElementById('resultName').textContent=r.name;
+  document.getElementById('resultMeta').textContent=meta(r);
+  document.getElementById('resultSummary').textContent=r.summary||'';
+
+  document.getElementById('menuBtn').onclick=()=>{
+    if(!r.menuUrl){ alert('menuUrl 없음'); return; }
+    window.open(r.menuUrl, '_blank');
+  };
+  document.getElementById('copyBtn').onclick=()=>{
+    const txt=`[점심결과] ${r.name}\n- ${meta(r)}\n- ${r.summary||''}\n- 메뉴판: ${r.menuUrl||'-'}`;
+    navigator.clipboard?.writeText(txt).catch(()=>{});
+    alert(txt);
+  };
+}
+
+document.getElementById('startBtn').onclick=spin;
+document.getElementById('quickBtn').onclick=()=>{
+  if(!restaurants.length){ alert('조건에 맞는 식당이 없음'); return; }
+  renderResult(restaurants[Math.floor(Math.random()*restaurants.length)]);
+};
+</script>
+</body>
+</html>
